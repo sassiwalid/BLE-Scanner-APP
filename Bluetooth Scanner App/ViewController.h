@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import <CoreBluetooth/CoreBluetooth.h>
+@interface ViewController : UIViewController<CBCentralManagerDelegate,
+CBPeripheralDelegate>
+#define SERVICE_UUID        @ "FFF0"
+#define CHARACTERISTIC_UUID @ "FFF3"
 
 @end
 
